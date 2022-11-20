@@ -1,21 +1,42 @@
+:root {
+  --blue: #2196f3;
+  --white: #ffffff;
+  --black: #212121;
+  --light-gray: #757575;
+  --dark-gray: #2f303a;
+  --dirty-white: #f5f4fa;
+  --border-white: #eeeeee;
+}
+
 body {
-  background-color: #ffffff;
-  color: #212121;
+  background-color: var(--white);
+  color: var(--black);
   font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 94px 0;
 }
 
 ul {
   list-style: none;
 }
 
+#header-container {
+  height: 31px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+
 header {
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 1600px;
   height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -23,18 +44,17 @@ header {
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  color: #2196f3;
+  color: var(--blue);
 }
 
 #nav-logo {
-  margin-left: 215px;
   margin-right: 93px;
 }
 
 nav {
   font-weight: 500;
   font-size: 14px;
-  color: #212121;
+  color: var(--black);
   margin-right: 294px;
 }
 
@@ -49,41 +69,29 @@ nav {
 .contact-top {
   font-size: 14px;
   font-weight: 500;
-  color: #757575;
+  color: var(--light-gray);
   margin-left: 50px;
 }
 
-#title {
-  background-color: #2f303a;
-  width: 1600px;
-  height: 600px;
+#title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 95px;
-}
-
-#title-text {
-  width: 696px;
-  height: 120px;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 h1 {
   font-size: 44px;
   font-weight: 900;
-  color: #ffffff;
-  margin: 0;
+  color: var(--white);
+  text-align: center;
 }
 
 .button-request {
   width: 261px;
   height: 50px;
-  color: #ffffff;
+  color: var(--white);
   border: none;
-  background: #2196f3;
+  background: var(--blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 700;
@@ -91,20 +99,15 @@ h1 {
   cursor: pointer;
 }
 
-#attributes-container {
-  width: 1600px;
-  height: 122px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 94px;
-}
-
-#attributes {
-  width: 1170px;
-  margin: 0px;
-  padding-left: 0px;
+.flex-list {
   display: flex;
   justify-content: space-between;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+#attributes-container {
+  padding-bottom: 0px;
 }
 
 .attribute-card {
@@ -113,7 +116,7 @@ h1 {
 }
 
 .attribute-title {
-  color: #212121;
+  color: var(--black);
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -121,70 +124,34 @@ h1 {
 }
 
 .attribute-content {
-  color: #757575;
+  color: var(--light-gray);
   font-size: 14px;
   margin: 0px;
 }
 
-#what-we-do-container {
-  width: 1600px;
-  height: 425px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 94px;
-}
-
-#what-we-do {
-  width: 1173.16px;
-  /* height: 425px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#what-we-do-images {
-  width: 1173.16px;
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  justify-content: space-between;
-}
-
 #what-we-do-title {
+  text-align: center;
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 55.05px 0;
 }
 
-#our-team-container {
-  width: 1600px;
-  height: 648px;
-  background-color: #f5f4fa;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.bg-dirty-white {
+  background-color: var(--dirty-white);
 }
 
-#our-team {
+.bg-dark-gray {
+  background-color: var(--dark-gray);
+  height: 600px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 94px;
 }
 
 #our-team-title {
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 50px 0;
-}
-
-#our-team-cards {
-  width: 1177px;
-  height: 368px;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0px;
-  margin: 0px;
+  text-align: center;
 }
 
 .team-member-card {
@@ -198,18 +165,18 @@ h1 {
 
 .team-member-name {
   font-weight: 500;
-  color: #212121;
+  color: var(--black);
 }
 
 .team-member-role {
-  color: #757575;
+  color: var(--light-gray);
 }
 
 .button {
   height: 38px;
-  background: #f5f4fa;
+  background: var(--dirty-white);
   border-radius: 4px;
-  color: #212121;
+  color: var(--black);
   border: none;
   cursor: pointer;
   font-weight: 500;
@@ -217,39 +184,32 @@ h1 {
 }
 
 .button:hover {
-  background: #2196f3;
-  color: #ffffff;
+  background: var(--blue);
+  color: var(--white);
 }
 
 .button:focus {
-  background: #2196f3;
-  color: #ffffff;
+  background: var(--blue);
+  color: var(--white);
 }
 
 a:hover {
-  color: #2196f3;
+  color: var(--blue);
 }
 
 a:focus {
-  color: #2196f3;
+  color: var(--blue);
 }
 
 a {
   text-decoration: none;
-  color: #212121;
-}
-
-#portfolio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1600px;
-  height: 1548px;
+  color: var(--black);
 }
 
 #portfolio {
-  width: 1170px;
   height: 1360px;
+  padding-top: 0px;
+  margin-bottom: 82px;
 }
 
 .portfolio-item-card {
@@ -258,30 +218,30 @@ a {
   left: calc(50% - 370px / 2);
   top: calc(50% - 404px / 2 - 464px);
 
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+  background: var(--white);
+  border: 1px solid var(--border-white);
 }
 
 .portfolio-item-card:hover {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+  background: var(--white);
+  border: 1px solid var(--border-white);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
 .portfolio-item-name {
-  color: #212121;
+  color: var(--black);
   font-weight: 700;
   font-size: 18px;
 }
 
 .portfolio-item-description {
-  color: #757575;
+  color: var(--light-gray);
 }
 
 #buttons-container {
-  width: 1170px;
+  width: 1200px;
   margin-top: 106px;
   margin-bottom: 34px;
   display: flex;
@@ -305,24 +265,23 @@ a {
 }
 
 footer {
-  background-color: #2f303a;
-  width: 1600px;
+  background-color: var(--dark-gray);
   height: 252px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0px;
 }
 
-#footer-info {
-  width: 1177px;
+#footer-container {
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: var(--dark-gray);
+  height: 252px;
 }
 
 address {
   font-size: 14px;
   line-height: 24px;
   font-style: normal;
-  color: #ffffff;
+  color: var(--white);
   margin: 0px;
 }
 
