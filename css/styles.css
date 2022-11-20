@@ -218,9 +218,10 @@ a {
   height: 404px;
   left: calc(50% - 370px / 2);
   top: calc(50% - 404px / 2 - 464px);
-
   background: var(--white);
   border: 1px solid var(--border-white);
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-item-card:hover {
@@ -231,10 +232,15 @@ a {
   cursor: pointer;
 }
 
+.portfolio-item-data{
+  margin: 20px 24px;
+}
+
 .portfolio-item-name {
   color: var(--black);
   font-weight: 700;
   font-size: 18px;
+  margin-top: 0px;
 }
 
 .portfolio-item-description {
