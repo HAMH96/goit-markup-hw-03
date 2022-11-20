@@ -181,6 +181,7 @@ h1 {
   cursor: pointer;
   font-weight: 500;
   line-height: 26px;
+  padding: 6px 24px;
 }
 
 .button:hover {
@@ -249,11 +250,8 @@ a {
 }
 
 #filter-buttons {
-  padding: 0px;
   margin: 0 0 16px 0;
   width: 611px;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 #portfolio-cards {
